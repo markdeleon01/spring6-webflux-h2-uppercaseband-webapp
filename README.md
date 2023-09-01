@@ -10,7 +10,7 @@ This is a Spring Boot 3 web application that serves up articles regarding the UP
 
 The articles are categorized and displayed according to the various sections of the website,
 such as highlights on the home page, events, discography section, and band information section;
-they are stored and retrieved as documents from an embedded MongoDB NoSQL database.
+they are stored and retrieved from an embedded H2 R2DBC database.
 
 The article resources are exposed with the API route:
 http://localhost:8080/api/v1/articles
