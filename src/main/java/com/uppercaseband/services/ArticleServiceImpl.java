@@ -5,6 +5,7 @@ import com.uppercaseband.domain.Category;
 import com.uppercaseband.mappers.ArticleMapper;
 import com.uppercaseband.models.ArticleDTO;
 import com.uppercaseband.repositories.ArticleRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
@@ -14,16 +15,11 @@ import java.io.StringWriter;
 
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class ArticleServiceImpl implements ArticleService {
 
     private final ArticleRepository articleRepository;
     private final ArticleMapper articleMapper;
-
-
-    public ArticleServiceImpl(ArticleRepository articleRepository, ArticleMapper articleMapper) {
-        this.articleRepository = articleRepository;
-        this.articleMapper = articleMapper;
-    }
 
 
     @Override
