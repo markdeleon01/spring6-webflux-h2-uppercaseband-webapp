@@ -3,6 +3,7 @@ package com.uppercaseband.repositories;
 import com.uppercaseband.config.DatabaseConfig;
 import com.uppercaseband.domain.Article;
 import com.uppercaseband.domain.Category;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.r2dbc.DataR2dbcTest;
@@ -19,6 +20,12 @@ class ArticleRepositoryTest {
 
     @Autowired
     ArticleRepository articleRepository;
+
+    @BeforeEach
+    public void setUp() {
+        articleRepository.deleteAll().block();
+    }
+
 
     @Test
     void testGetArticles() {
