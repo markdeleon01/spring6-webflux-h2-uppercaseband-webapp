@@ -40,7 +40,7 @@ class ArticleControllerTest {
     void testGetArticlesByCategory() {
         log.debug("testGetArticlesByCategory");
 
-        webTestClient.get().uri(ArticleController.BASE_URL + "?category="+ Category.HIGHLIGHTS)
+        webTestClient.get().uri(ArticleController.BASE_URL + "/category/"+ Category.HIGHLIGHTS)
                 .accept(MediaType.APPLICATION_JSON)
                 .exchange()
                 .expectStatus().isOk()
@@ -53,7 +53,7 @@ class ArticleControllerTest {
     void testGetArticlesByInvalidCategory() {
         log.debug("testGetArticlesByInvalidCategory");
 
-        webTestClient.get().uri(ArticleController.BASE_URL + "?category=SOMEINVALIDCATEGORY")
+        webTestClient.get().uri(ArticleController.BASE_URL + "/category/SOME_INVALID_CATEGORY")
                 .accept(MediaType.APPLICATION_JSON)
                 .exchange()
                 .expectHeader().contentType(MediaType.APPLICATION_JSON)
@@ -65,7 +65,7 @@ class ArticleControllerTest {
     void testGetArticlesByEmptyCategory() {
         log.debug("testGetArticlesByEmptyCategory");
 
-        webTestClient.get().uri(ArticleController.BASE_URL + "?category=")
+        webTestClient.get().uri(ArticleController.BASE_URL + "/category/")
                 .accept(MediaType.APPLICATION_JSON)
                 .exchange()
                 .expectHeader().contentType(MediaType.APPLICATION_JSON)
@@ -77,7 +77,7 @@ class ArticleControllerTest {
     void testGetArticlesByCategoryResponseBody() {
         log.debug("testGetArticlesByCategoryResponseBody");
 
-        webTestClient.get().uri(ArticleController.BASE_URL + "?category="+ Category.EVENTS)
+        webTestClient.get().uri(ArticleController.BASE_URL + "/category/"+ Category.EVENTS)
                 .accept(MediaType.APPLICATION_JSON)
                 .exchange()
                 .expectStatus().isOk()

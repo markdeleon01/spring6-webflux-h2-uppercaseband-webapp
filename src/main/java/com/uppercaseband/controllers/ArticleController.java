@@ -5,6 +5,7 @@ import com.uppercaseband.services.ArticleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
@@ -30,8 +31,8 @@ public class ArticleController {
     }
 
 
-    @GetMapping(path = ArticleController.BASE_URL, params = "category")
-    public Flux<ArticleDTO> getArticlesByCategory(@RequestParam Optional<String> category) {
+    @GetMapping(path = ArticleController.BASE_URL+"/category/{category}")
+    public Flux<ArticleDTO> getArticlesByCategory(@PathVariable Optional<String> category) {
 
         if (category.isPresent()) {
             return articleService.getArticlesByCategory(category.get().toUpperCase())
