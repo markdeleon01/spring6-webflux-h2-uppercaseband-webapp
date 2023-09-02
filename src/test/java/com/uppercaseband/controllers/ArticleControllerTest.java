@@ -61,6 +61,18 @@ class ArticleControllerTest {
     }
 
     @Test
+    @Order(6)
+    void testGetArticlesByNoCategory() {
+        log.debug("testGetArticlesByNoCategory");
+
+        webTestClient.get().uri(ArticleController.BASE_URL + "/category/")
+                .accept(MediaType.APPLICATION_JSON)
+                .exchange()
+                .expectHeader().contentType(MediaType.APPLICATION_JSON)
+                .expectStatus().isNotFound();
+    }
+
+    @Test
     @Order(5)
     void testGetArticlesByEmptyCategory() {
         log.debug("testGetArticlesByEmptyCategory");
