@@ -39,7 +39,7 @@ public class BootStrapData implements CommandLineRunner {
                 Article article1 = Article.builder()
                         .title("Tanging Ikaw")
                         .description("The brand new single from UPPERCASE released under Radio Insect Records")
-                        .sortOrder(100)
+                        .displayOrder(100)
                         .category(Category.HIGHLIGHTS)
                         .subContent("<a href='https://open.spotify.com/artist/6h4pjpssOa3fBNiQmSkgOB?si=lbGJiYu7R_6ouDMIs7Jv3A'>CHECK IT OUT</a>")
                         //.media(article1Media)
@@ -54,7 +54,7 @@ public class BootStrapData implements CommandLineRunner {
                 Article article2 = Article.builder()
                         .title("'Time Space Warp' Album Launch")
                         .description("May 17, 2013 – Hard Rock Café Toronto")
-                        .sortOrder(200)
+                        .displayOrder(200)
                         .category(Category.HIGHLIGHTS)
                         .subContent("<p><a href='https://www.facebook.com/pg/cyberpinoyradio/photos/?tab=album&album_id=657041557656169'>SEE EVENT PICS</a></p><p><a href='https://youtu.be/yNt0JV8or3k?list=PL0AgfLYM2K_sKTvDMqLY4sDr8Pi1zadB0'>WATCH EVENT VIDEO</a></p>")
                         //.media(article2Media)
@@ -69,9 +69,9 @@ public class BootStrapData implements CommandLineRunner {
                 Article article3 = Article.builder()
                         .title("'Time Space Warp' Music Video Launch")
                         .description("July 12, 2013 – Prestige Bar, North York")
-                        .sortOrder(300)
+                        .displayOrder(300)
                         .category(Category.EVENTS)
-                        //.media(article2Media)
+                        //.media(article3Media)
                         .build();
 
 
