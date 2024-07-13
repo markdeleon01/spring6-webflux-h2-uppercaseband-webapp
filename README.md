@@ -16,3 +16,25 @@ The article resources are exposed with the API route:
 http://localhost:8080/api/v1/articles
 
 JUnit5 tests were written to assert functionalities of the repository, service, and controller classes.
+
+
+## Project setup
+
+1. Install Java SE 17 LTS:
+   https://www.oracle.com/java/technologies/downloads/#java17
+2. Install Apache Maven:
+   https://maven.apache.org/download.cgi
+3. Clone this project repository
+4. Navigate to the project folder and install
+   ```sh
+   mvn compile
+   mvn test
+   mvn package
+   ```
+5. Run the web application
+   ```sh
+   java -jar target/spring6-reactive-uppercaseband-webapp-0.0.1-SNAPSHOT.jar
+   ```
+6. Open a browser window and navigate to: http://localhost:8080/api/v1/articles
+7. Download the Postman desktop app:  https://www.postman.com
+8. Open the Swagger UI / Open API definition:  http://localhost:8080/swagger-ui.html
