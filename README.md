@@ -2,7 +2,7 @@
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/markdeleon01/spring6-webflux-h2-uppercaseband-webapp/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/markdeleon01/spring6-webflux-h2-uppercaseband-webapp/tree/main)
 
-[![codecov](https://codecov.io/gh/markdeleon01/spring6-reactive-uppercaseband-webapp/graph/badge.svg?token=M2LUDXXSS1)](https://codecov.io/gh/markdeleon01/spring6-reactive-uppercaseband-webapp)
+[![codecov](https://codecov.io/github/markdeleon01/spring6-webflux-h2-uppercaseband-webapp/graph/badge.svg?token=M2LUDXXSS1)](https://codecov.io/github/markdeleon01/spring6-webflux-h2-uppercaseband-webapp)
 
 This repository is for a RESTful web application built on Spring6 Reactive WebFlux Framework for my band's website.
 
