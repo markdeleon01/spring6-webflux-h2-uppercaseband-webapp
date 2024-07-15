@@ -1,6 +1,6 @@
 # Spring6 Reactive WebFlux REST backend web application for UPPERCASE band
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/markdeleon01/spring6-reactive-uppercaseband-webapp/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/markdeleon01/spring6-reactive-uppercaseband-webapp/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/markdeleon01/spring6-webflux-h2-uppercaseband-webapp/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/markdeleon01/spring6-webflux-h2-uppercaseband-webapp/tree/main)
 
 [![codecov](https://codecov.io/gh/markdeleon01/spring6-reactive-uppercaseband-webapp/graph/badge.svg?token=M2LUDXXSS1)](https://codecov.io/gh/markdeleon01/spring6-reactive-uppercaseband-webapp)
 
