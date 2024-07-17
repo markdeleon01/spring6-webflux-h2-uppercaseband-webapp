@@ -37,4 +37,5 @@ JUnit5 tests were written to assert functionalities of the repository, service, 
    ```
 6. Open a browser window and navigate to: http://localhost:8080/api/v1/articles
 7. Download the Postman desktop app:  https://www.postman.com
-8. Open the Swagger UI / Open API definition:  http://localhost:8080/swagger-ui.html
+8. Use the Postman desktop app to access the exposed APIs.
+9. Open the Swagger UI / Open API definition:  http://localhost:8080/swagger-ui.html
