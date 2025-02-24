@@ -3,6 +3,8 @@ package com.uppercaseband.repositories;
 import com.uppercaseband.config.DatabaseConfig;
 import com.uppercaseband.domain.Article;
 import com.uppercaseband.domain.Category;
+import com.uppercaseband.domain.Media;
+import com.uppercaseband.domain.MediaType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,6 +68,12 @@ class ArticleRepositoryTest {
     }
 
     Article getTestArticle1() {
+        /**
+        Media article1Media = Media.builder()
+                .type(MediaType.IMAGE)
+                .path("/images/tanging_ikaw.png")
+                .build();
+        */
         return Article.builder()
                 .title("Tanging Ikaw")
                 .description("The brand new single from UPPERCASE released under Radio Insect Records")
@@ -77,6 +85,12 @@ class ArticleRepositoryTest {
     }
 
     Article getTestArticle2() {
+        /**
+        Media article2Media = Media.builder()
+                .type(MediaType.IMAGE)
+                .path("/images/tsw_album.png")
+                .build();
+        */
         return Article.builder()
                 .title("'Time Space Warp' Album Launch")
                 .description("May 17, 2013 – Hard Rock Café Toronto")
@@ -88,12 +102,18 @@ class ArticleRepositoryTest {
     }
 
     Article getTestArticle3() {
+        /**
+        Media article3Media = Media.builder()
+                .type(MediaType.VIDEO)
+                .path("<iframe width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/ZfNUPtLtH5w\" frameborder=\"0\" allowfullscreen></iframe>")
+                .build();
+        */
         return Article.builder()
                 .title("'Time Space Warp' Music Video Launch")
                 .description("July 12, 2013 – Prestige Bar, North York")
                 .displayOrder(300)
                 .category(Category.EVENTS)
-                //.media(article2Media)
+                //.media(article3Media)
                 .build();
     }
 }
