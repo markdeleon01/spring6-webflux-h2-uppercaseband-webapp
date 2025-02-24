@@ -32,11 +32,7 @@ public class ArticleController {
     @GetMapping(path = ArticleController.BASE_URL+"/category/{category}")
     public Flux<ArticleDTO> getArticlesByCategory(@PathVariable Optional<String> category) {
 
-        if (category.isPresent()) {
-            return articleService.getArticlesByCategory(category.get().toUpperCase())
-                    .switchIfEmpty(Flux.error(new ResponseStatusException(HttpStatus.NOT_FOUND)));
-        } else {
-            return Flux.error(new ResponseStatusException(HttpStatus.NOT_FOUND));
-        }
+        return category.map(s -> articleService.getArticlesByCategory(s.toUpperCase())
+                .switchIfEmpty(Flux.error(new ResponseStatusException(HttpStatus.NOT_FOUND)))).orElseGet(() -> Flux.error(new ResponseStatusException(HttpStatus.NOT_FOUND)));
     }
 }

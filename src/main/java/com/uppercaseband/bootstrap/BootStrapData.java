@@ -18,12 +18,10 @@ public class BootStrapData implements CommandLineRunner {
 
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         loadInitialData();
 
-        articleRepository.count().subscribe(count -> {
-            System.out.println("Article count is: " + count);
-        });
+        articleRepository.count().subscribe(count -> System.out.println("Article count is: " + count));
     }
 
 

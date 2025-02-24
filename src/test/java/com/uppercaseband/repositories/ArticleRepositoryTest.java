@@ -27,9 +27,7 @@ class ArticleRepositoryTest {
                 .subscribe(article -> System.out.println(article.toString()));
         articleRepository.save(getTestArticle3())
                 .subscribe(article -> System.out.println(article.toString()));
-        articleRepository.count().subscribe(count -> {
-            System.out.println("Articles count is: " + count);
-        });
+        articleRepository.count().subscribe(count -> System.out.println("Articles count is: " + count));
     }
 
 
@@ -38,7 +36,7 @@ class ArticleRepositoryTest {
 
         articleRepository.count().subscribe(count -> {
             System.out.println("testGetArticles count is: " + count);
-            assertEquals(count, 3);
+            assertEquals(3, count);
         });
     }
 
@@ -61,7 +59,7 @@ class ArticleRepositoryTest {
 
         //when
         Long count = articleRepository.findByCategory(null).count().block();
-        System.out.println("testFindByCategory category "+Category.HIGHLIGHTS+" count is: " + count);
+        System.out.println("testFindByInvalidCategory category "+Category.HIGHLIGHTS+" count is: " + count);
 
         //then
         assertEquals(0, count);
